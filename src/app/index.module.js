@@ -9,6 +9,7 @@ import { GithubContributorService } from '../app/components/githubContributor/gi
 import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
 import { NavbarDirective } from '../app/components/navbar/navbar.directive';
 import { MalarkeyDirective } from '../app/components/malarkey/malarkey.directive';
+import { JobDirective } from '../app/components/job/job.directive';
 
 angular.module('code', ['ngTouch', 'ngMessages', 'ngResource', 'ui.router', 'toastr'])
   .constant('malarkey', malarkey)
@@ -21,4 +22,5 @@ angular.module('code', ['ngTouch', 'ngMessages', 'ngResource', 'ui.router', 'toa
   .controller('MainController', MainController)
   .controller('DashboardController', DashboardController)
   .directive('acmeNavbar', NavbarDirective)
-  .directive('acmeMalarkey', MalarkeyDirective);
+  .directive('acmeMalarkey', MalarkeyDirective)
+  .directive('job', JobDirective);
