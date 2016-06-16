@@ -1,11 +1,6 @@
 <div class="container">
   <h5>Jobs</h5>
-  <job type="firewall" state="pending" details=""></job>
-  <job type="firewall" state="running" details=""></job>
-  <job type="firewall" state="rejected" details=""></job>
-  <job type="firewall" state="accepted" details=""></job>
-  <job type="build" state="pending" details=""></job>
-  <job type="build" state="running" details=""></job>
-  <job type="build" state="fail" details=""></job>
-  <job type="build" state="success" details=""></job>
+  <div ng-repeat="job in dashboard.jobs track by $index">
+    <job type="{{ job.type }}" state="{{ job.state }}" details="{{ job.details }}"></job>
+  </div>
 </div>

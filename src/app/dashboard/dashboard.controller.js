@@ -1,7 +1,10 @@
 export class DashboardController {
-  constructor ($log) {
+  constructor (JobsService) {
     'ngInject';
 
-    $log.debug('inside dashboard controller');
+    const jobsPromise = JobsService.getJobs();
+    jobsPromise.then((jobs) => {
+      this.jobs = jobs;
+    });
   }
 }
