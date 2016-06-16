@@ -1,5 +1,10 @@
-<div>
-  <span>{{ vm.type }}</span>
-  <span>{{ vm.state }}</span>
-  <span>{{ vm.details }}</span>
+<div class="job">
+  <div class="grid-item name">{{ vm.name }}</div>
+  <div class="grid-item owner">{{ vm.owner }}</div>
+  <div class="grid-item timestamp">{{ vm.timestamp | date:'M/dd/yyyy hh:mm a' }}</div>
+  <div class="grid-item state">{{ vm.state }}</div>
+  <div class="grid-item metrics">{{ vm.metrics }}</div>
+  <div class="grid-item build">{{ vm.build }}</div>
+  <div class="grid-item unit-test">{{ vm.unitTest }}</div>
+  <div class="grid-item functional-test">{{ vm.functionalTest }}</div>
 </div>

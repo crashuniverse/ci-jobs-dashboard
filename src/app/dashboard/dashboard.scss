@@ -1,0 +1,43 @@
+.header {
+  margin-top: 20px;
+}
+
+.grid-header {
+  font-weight: bold;
+}
+
+.grid-item {
+  display: inline-block;
+
+  &.name {
+    width: 20%;
+  }
+
+  &.owner {
+    width: 10%;
+  }
+
+  &.timestamp {
+    width: 15%;
+  }
+
+  &.state {
+    width: 10%;
+  }
+
+  &.metrics {
+    width: 10%;
+  }
+
+  &.build {
+    width: 10%;
+  }
+
+  &.unit-test {
+    width: 10%;
+  }
+
+  &.functional-test {
+    width: 10%;
+  }
+}

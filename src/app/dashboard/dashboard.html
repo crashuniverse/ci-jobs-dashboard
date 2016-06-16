@@ -1,6 +1,26 @@
 <div class="container">
-  <h5>Jobs</h5>
+  <div class="lead header">Jobs Dashboard</div>
+  <div class="row grid-header">
+    <div class="col-md-12">
+      <div class="grid-item name">Changelist / Build</div>
+      <div class="grid-item owner">Owner</div>
+      <div class="grid-item timestamp">Time Started</div>
+      <div class="grid-item state">State</div>
+      <div class="grid-item metrics">Metrics</div>
+      <div class="grid-item build">Build</div>
+      <div class="grid-item unit-test">Unit Test</div>
+      <div class="grid-item functional-test">Functional Test</div>
+    </div>
+  </div>
   <div ng-repeat="job in dashboard.jobs track by $index">
-    <job type="{{ job.type }}" state="{{ job.state }}" details="{{ job.details }}"></job>
+    <job type="{{ job.type }}"
+      name="{{ job.name }}"
+      owner="{{ job.owner }}"
+      timestamp="{{ job.timestamp }}"
+      state="{{ job.state }}"
+      metrics="{{ job.metrics }}"
+      build="{{ job.build }}"
+      unit-test="{{ job.unitTest }}"
+      functional-test="{{ job.functionalTest }}"></job>
   </div>
 </div>

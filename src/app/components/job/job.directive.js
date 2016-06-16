@@ -6,7 +6,13 @@ export function JobDirective() {
     scope: {
       type: '@',
       state: '@',
-      details: '@'
+      name: '@',
+      owner: '@',
+      timestamp: '@',
+      metrics: '@',
+      build: '@',
+      unitTest: '@',
+      functionalTest: '@'
     },
     templateUrl: 'app/components/job/job.html',
     link: linkFunc,
