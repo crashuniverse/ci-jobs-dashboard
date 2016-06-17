@@ -1,10 +1,31 @@
 <div class="job">
-  <div class="grid-item name">{{ vm.name }}</div>
-  <div class="grid-item owner">{{ vm.owner }}</div>
-  <div class="grid-item timestamp">{{ vm.timestamp | date:'M/dd/yyyy hh:mm a' }}</div>
-  <div class="grid-item state">{{ vm.state }}</div>
-  <div class="grid-item metrics">{{ vm.metrics }}</div>
-  <div class="grid-item build">{{ vm.build }}</div>
-  <div class="grid-item unit-test">{{ vm.unitTest }}</div>
-  <div class="grid-item functional-test">{{ vm.functionalTest }}</div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="grid-item name">{{ vm.name }}</div>
+      <div class="grid-item owner">{{ vm.owner }}</div>
+      <div class="grid-item timestamp">{{ vm.timestamp | date:'M/dd/yyyy hh:mm a' }}</div>
+      <div class="grid-item state">{{ vm.state }}</div>
+      <div class="grid-item metrics">
+        <div class="block"></div>
+      </div>
+      <div class="grid-item build">
+        <div class="block"></div>
+      </div>
+      <div class="grid-item unit-test">
+        <div class="block"></div>
+      </div>
+      <div class="grid-item functional-test">
+        <div class="block"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row" ng-if="vm.isOpen">
+    <div class="col-md-12">
+      <div class="job-details">{{ vm.metrics }}</div>
+      <div class="job-details">{{ vm.build }}</div>
+      <div class="job-details">{{ vm.unitTest }}</div>
+      <div class="job-details">{{ vm.functionalTest }}</div>
+      <div class="job-details job-details-outcome">{{ vm.outcome }}</div>
+    </div>
+  </div>
 </div>

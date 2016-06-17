@@ -31,4 +31,37 @@
     background: -o-linear-gradient(left, $light-green, $white);
     background: linear-gradient(to right, $light-green, $white);
   }
+
+  .block {
+    width: 30px;
+    height: 20px;
+    background-color: $grey;
+    margin: 0 auto;
+  }
+
+  &.pending .block {
+    background-color: $grey;
+  }
+
+  &.running .block {
+    background-color: $blue;
+  }
+
+  &.fail .block {
+    background-color: $dark-red;
+  }
+
+  &.success .block {
+    background-color: $dark-green;
+  }
+
+  .job-details {
+    display: inline-block;
+    width: 20%;
+
+    &.job-details-outcome {
+      width: 15%;
+    }
+  }
+
 }

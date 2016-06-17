@@ -12,7 +12,8 @@ export function JobDirective() {
       metrics: '@',
       build: '@',
       unitTest: '@',
-      functionalTest: '@'
+      functionalTest: '@',
+      isOpen: '='
     },
     templateUrl: 'app/components/job/job.html',
     link: linkFunc,
@@ -42,6 +43,8 @@ export function JobDirective() {
     const classToAdd = stateClassMapping[scope.vm.type] && stateClassMapping[scope.vm.type][scope.vm.state];
     const jobNode = el.children()[0];
     angular.element(jobNode).addClass(classToAdd);
+
+    scope.vm.outcome = {};
   }
 
 }

@@ -12,15 +12,17 @@
       <div class="grid-item functional-test">Functional Test</div>
     </div>
   </div>
-  <div ng-repeat="job in dashboard.jobs track by $index">
-    <job type="{{ job.type }}"
-      name="{{ job.name }}"
-      owner="{{ job.owner }}"
-      timestamp="{{ job.timestamp }}"
-      state="{{ job.state }}"
-      metrics="{{ job.metrics }}"
-      build="{{ job.build }}"
-      unit-test="{{ job.unitTest }}"
-      functional-test="{{ job.functionalTest }}"></job>
+  <div ng-repeat="job in dashboard.jobs track by $index"
+    ng-click=dashboard.toggleJob($index)>
+      <job type="{{ job.type }}"
+        name="{{ job.name }}"
+        owner="{{ job.owner }}"
+        timestamp="{{ job.timestamp }}"
+        state="{{ job.state }}"
+        metrics="{{ job.metrics }}"
+        build="{{ job.build }}"
+        unit-test="{{ job.unitTest }}"
+        functional-test="{{ job.functionalTest }}"
+        is-open="dashboard.openJobIndex === $index"></job>
   </div>
 </div>

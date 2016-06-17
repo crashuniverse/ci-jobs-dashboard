@@ -8,6 +8,7 @@
 
 .grid-item {
   display: inline-block;
+  vertical-align: middle;
 
   &.name {
     width: 20%;
@@ -23,21 +24,26 @@
 
   &.state {
     width: 10%;
+    text-transform: capitalize;
   }
 
   &.metrics {
     width: 10%;
+    text-align: center;
   }
 
   &.build {
     width: 10%;
+    text-align: center;
   }
 
   &.unit-test {
     width: 10%;
+    text-align: center;
   }
 
   &.functional-test {
     width: 10%;
+    text-align: center;
   }
 }

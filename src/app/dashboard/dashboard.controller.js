@@ -6,5 +6,15 @@ export class DashboardController {
     jobsPromise.then((jobs) => {
       this.jobs = jobs;
     });
+
+    this.openJobIndex = null;
+
+    this.toggleJob = (index) => {
+      if (this.openJobIndex === index) {
+        this.openJobIndex = null;
+      } else {
+        this.openJobIndex = index;
+      }
+    }
   }
 }
