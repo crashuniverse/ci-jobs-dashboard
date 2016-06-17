@@ -21,10 +21,27 @@ export function JobDirective() {
     bindToController: true
   };
 
+  const stateClassMapping = {
+    firewall: {
+      pending: 'pending',
+      running: 'running',
+      rejected: 'fail',
+      accepted: 'success'
+    },
+    build: {
+      pending: 'pending',
+      running: 'running',
+      fail: 'fail',
+      success: 'success'
+    }
+  };
+
   return directive;
 
-  function linkFunc() {
-
+  function linkFunc(scope, el) {
+    const classToAdd = stateClassMapping[scope.vm.type] && stateClassMapping[scope.vm.type][scope.vm.state];
+    const jobNode = el.children()[0];
+    angular.element(jobNode).addClass(classToAdd);
   }
 
 }

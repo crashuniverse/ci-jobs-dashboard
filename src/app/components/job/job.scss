@@ -1,5 +1,34 @@
 .job {
-  border: solid 2px #cccccc;
+  border: solid 2px;
+  border-color:  $grey;
   margin: 15px 0;
   padding: 15px 10px;
+
+  &.pending {
+    border-color: $grey;
+    background: -webkit-linear-gradient(left, $light-grey, $white);
+    background: -o-linear-gradient(left, $light-grey, $white);
+    background: linear-gradient(to right, $light-grey, $white);
+  }
+
+  &.running {
+    border-color: $blue;
+    background: -webkit-linear-gradient(left, $light-blue, $white);
+    background: -o-linear-gradient(left, $light-blue, $white);
+    background: linear-gradient(to right, $light-blue, $white);
+  }
+
+  &.fail {
+      border-color: $dark-red;
+      background: -webkit-linear-gradient(left, $light-red, $white);
+      background: -o-linear-gradient(left, $light-red, $white);
+      background: linear-gradient(to right, $light-red, $white);
+    }
+
+  &.success {
+    border-color: $dark-green;
+    background: -webkit-linear-gradient(left, $light-green, $white);
+    background: -o-linear-gradient(left, $light-green, $white);
+    background: linear-gradient(to right, $light-green, $white);
+  }
 }
