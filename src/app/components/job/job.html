@@ -1,6 +1,8 @@
 <div class="job">
   <div class="row">
     <div class="col-md-12">
+      <img class="icon-job-type"
+        ng-src="assets/images/job-type-{{ vm.type }}.svg" alt="job type icon" />
       <div class="grid-item name">{{ vm.name }}</div>
       <div class="grid-item owner">{{ vm.owner }}</div>
       <div class="grid-item timestamp">{{ vm.timestamp | date:'M/dd/yyyy hh:mm a' }}</div>

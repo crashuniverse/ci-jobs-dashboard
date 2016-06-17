@@ -9,6 +9,7 @@
     background: -webkit-linear-gradient(left, $light-grey, $white);
     background: -o-linear-gradient(left, $light-grey, $white);
     background: linear-gradient(to right, $light-grey, $white);
+    color: $dark-grey;
   }
 
   &.running {
@@ -16,20 +17,31 @@
     background: -webkit-linear-gradient(left, $light-blue, $white);
     background: -o-linear-gradient(left, $light-blue, $white);
     background: linear-gradient(to right, $light-blue, $white);
+    color: $blue;
   }
 
   &.fail {
-      border-color: $dark-red;
-      background: -webkit-linear-gradient(left, $light-red, $white);
-      background: -o-linear-gradient(left, $light-red, $white);
-      background: linear-gradient(to right, $light-red, $white);
-    }
+    border-color: $dark-red;
+    background: -webkit-linear-gradient(left, $light-red, $white);
+    background: -o-linear-gradient(left, $light-red, $white);
+    background: linear-gradient(to right, $light-red, $white);
+    color: $dark-red;
+  }
 
   &.success {
     border-color: $dark-green;
     background: -webkit-linear-gradient(left, $light-green, $white);
     background: -o-linear-gradient(left, $light-green, $white);
     background: linear-gradient(to right, $light-green, $white);
+    color: $dark-green;
+  }
+
+  .icon-job-type {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    opacity: 0.7;
   }
 
   .block {
