@@ -26,6 +26,7 @@
     background: -o-linear-gradient(left, $light-red, $white);
     background: linear-gradient(to right, $light-red, $white);
     color: $dark-red;
+    cursor: pointer;
   }
 
   &.success {
@@ -34,6 +35,7 @@
     background: -o-linear-gradient(left, $light-green, $white);
     background: linear-gradient(to right, $light-green, $white);
     color: $dark-green;
+    cursor: pointer;
   }
 
   .icon-job-type {
@@ -69,11 +71,23 @@
 
   .job-details {
     display: inline-block;
-    width: 20%;
+    width: 17%;
+    height: 160px;
+    border: solid 3px;
+    margin: 10px;
+    padding: 0 10px 5px;
+    vertical-align: top;
+  }
 
-    &.job-details-outcome {
-      width: 15%;
-    }
+  .job-details-outcome {
+    display: inline-block;
+    width: 15%;
+    height: 160px;
+    border: solid 3px transparent;
+    margin: 10px;
+    padding: 0 10px 5px;
+    vertical-align: top;
+    text-align: center;
   }
 
 }

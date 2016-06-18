@@ -9,8 +9,8 @@ export class DashboardController {
 
     this.openJobIndex = null;
 
-    this.toggleJob = (index) => {
-      if (this.openJobIndex === index) {
+    this.toggleJob = (state, index) => {
+      if (state === 'pending' || state === 'running' || this.openJobIndex === index) {
         this.openJobIndex = null;
       } else {
         this.openJobIndex = index;

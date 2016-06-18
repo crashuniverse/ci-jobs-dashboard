@@ -23,11 +23,26 @@
   </div>
   <div class="row" ng-if="vm.isOpen">
     <div class="col-md-12">
-      <div class="job-details">{{ vm.metrics }}</div>
-      <div class="job-details">{{ vm.build }}</div>
-      <div class="job-details">{{ vm.unitTest }}</div>
-      <div class="job-details">{{ vm.functionalTest }}</div>
-      <div class="job-details job-details-outcome">{{ vm.outcome }}</div>
+      <div class="job-details">
+        <h4>Metrics</h4>
+        <code>{{ vm.metrics }}</code>
+      </div>
+      <div class="job-details">
+        <h4>Build</h4>
+        <code>{{ vm.build }}</code>
+      </div>
+      <div class="job-details">
+        <h4>Unit Test</h4>
+        <code>{{ vm.unitTest }}</code>
+      </div>
+      <div class="job-details">
+        <h4>Functional Test</h4>
+        <code>{{ vm.functionalTest }}</code>
+      </div>
+      <div class="job-details-outcome">
+        <h4>Result</h4>
+        <code>{{ vm.outcome }}</code>
+      </div>
     </div>
   </div>
 </div>

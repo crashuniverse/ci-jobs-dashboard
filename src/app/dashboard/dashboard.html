@@ -13,7 +13,7 @@
     </div>
   </div>
   <div ng-repeat="job in dashboard.jobs track by $index"
-    ng-click=dashboard.toggleJob($index)>
+    ng-click="dashboard.toggleJob(job.state, $index)">
       <job type="{{ job.type }}"
         name="{{ job.name }}"
         owner="{{ job.owner }}"

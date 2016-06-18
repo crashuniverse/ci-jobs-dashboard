@@ -28,10 +28,31 @@
       "name": "432451",
       "owner": "jtuck",
       "timestamp": "2014-04-18T05:23:00.000Z",
-      "metrics": {},
-      "build": {},
-      "unitTest": {},
-      "functionalTest": {}
+      "metrics": {
+        "test": 64,
+        "testResult": "up",
+        "maintainability": 53,
+        "maintainabilityResult": "up",
+        "security": 64,
+        "securityResult": "nochange",
+        "workmanship": 72,
+        "workmanshipResult": "down"
+      },
+      "build": {
+        "timestamp": "2014-04-18T05:12:00.000Z"
+      },
+      "unitTest": {
+        "pass": 142,
+        "fail": 10,
+        "success": 73,
+        "coverage": 76
+      },
+      "functionalTest": {
+        "pass": 4321,
+        "fail": 2145,
+        "success": 68,
+        "coverage": 23
+      }
     },
     {
       "type": "firewall",
@@ -39,10 +60,31 @@
       "name": "432450",
       "owner": "samy",
       "timestamp": "2014-04-18T04:22:00.000Z",
-      "metrics": {},
-      "build": {},
-      "unitTest": {},
-      "functionalTest": {}
+      "metrics": {
+        "test": 64,
+        "testResult": "up",
+        "maintainability": 53,
+        "maintainabilityResult": "up",
+        "security": 64,
+        "securityResult": "nochange",
+        "workmanship": 72,
+        "workmanshipResult": "down"
+      },
+      "build": {
+        "timestamp": "2014-04-18T05:12:00.000Z"
+      },
+      "unitTest": {
+        "pass": 142,
+        "fail": 10,
+        "success": 73,
+        "coverage": 76
+      },
+      "functionalTest": {
+        "pass": 4321,
+        "fail": 2145,
+        "success": 68,
+        "coverage": 23
+      }
     },
     {
       "type": "build",
@@ -72,10 +114,31 @@
       "name": "Tenrox-R1_1232",
       "owner": "jtuck",
       "timestamp": "2014-04-18T03:01:00.000Z",
-      "metrics": {},
-      "build": {},
-      "unitTest": {},
-      "functionalTest": {}
+      "metrics": {
+        "test": 64,
+        "testResult": "up",
+        "maintainability": 53,
+        "maintainabilityResult": "up",
+        "security": 64,
+        "securityResult": "nochange",
+        "workmanship": 72,
+        "workmanshipResult": "down"
+      },
+      "build": {
+        "timestamp": "2014-04-18T05:12:00.000Z"
+      },
+      "unitTest": {
+        "pass": 142,
+        "fail": 10,
+        "success": 73,
+        "coverage": 76
+      },
+      "functionalTest": {
+        "pass": 4321,
+        "fail": 2145,
+        "success": 68,
+        "coverage": 23
+      }
     },
     {
       "type": "build",
@@ -83,10 +146,31 @@
       "name": "Tenrox-R1_1231",
       "owner": "samy",
       "timestamp": "2014-04-18T02:23:00.000Z",
-      "metrics": {},
-      "build": {},
-      "unitTest": {},
-      "functionalTest": {}
+      "metrics": {
+        "test": 64,
+        "testResult": "up",
+        "maintainability": 53,
+        "maintainabilityResult": "up",
+        "security": 64,
+        "securityResult": "nochange",
+        "workmanship": 72,
+        "workmanshipResult": "down"
+      },
+      "build": {
+        "timestamp": "2014-04-18T05:12:00.000Z"
+      },
+      "unitTest": {
+        "pass": 142,
+        "fail": 10,
+        "success": 73,
+        "coverage": 76
+      },
+      "functionalTest": {
+        "pass": 4321,
+        "fail": 2145,
+        "success": 68,
+        "coverage": 23
+      }
     }
   ]
 }
