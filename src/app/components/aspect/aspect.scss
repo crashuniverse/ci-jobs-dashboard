@@ -86,3 +86,20 @@
     margin-top: 10px;
   }
 }
+
+.aspect-popup {
+  position: fixed;
+  top: 20%;
+  left: 15%;
+  width: 70%;
+  height: 60%;
+  background: $white;
+  z-index: 1;
+  border: solid 3px $dark-grey;
+  padding: 20px;
+  color: $dark-grey;
+
+  .close {
+    float: right;
+  }
+}

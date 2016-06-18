@@ -105,13 +105,15 @@
     <div ng-show="vm.details.jobResult === 'rejected'">
       <div>Change Rejected</div>
       <div class="result">Metrics Reduction</div>
-      <button class="btn btn-primary btn-block btn-action">Find issues</button>
+      <button class="btn btn-primary btn-block btn-action"
+        ng-click="vm.actionJob($event, vm.type)">Find issues</button>
     </div>
     <div ng-show="vm.details.jobResult === 'accepted'">
       <div>Change Accepted</div>
       <div class="result-firewall-accepted">Auto-Merged</div>
       <br />
-      <button class="btn btn-primary btn-block btn-action">
+      <button class="btn btn-primary btn-block btn-action"
+        ng-click="vm.actionJob($event, vm.type)">
         <span class="glyphicon glyphicon-search"></span>
         <span>Merged Build</span>
       </button>
@@ -121,19 +123,28 @@
     <div ng-show="vm.details.jobResult === 'fail'">
       <div>Build Failed</div>
       <div class="result">Metrics Reduction</div>
-      <button class="btn btn-primary btn-block btn-action">Find issues</button>
+      <button class="btn btn-primary btn-block btn-action"
+        ng-click="vm.actionJob($event, vm.type)">Find issues</button>
     </div>
     <div ng-show="vm.details.jobResult === 'success'">
       <div class="result">Complete</div>
       <br />
-      <button class="btn btn-primary btn-action">Deploy</button>
+      <button class="btn btn-primary btn-action"
+        ng-click="vm.actionJob($event, vm.type)">Deploy</button>
       <span>to:</span>
-      <select class="select-env">
-        <option>Development</option>
-        <option>Staging</option>
-        <option selected>Production</option>
+      <select class="select-env"
+        ng-click="vm.actionJob($event, vm.type)">
+          <option>Development</option>
+          <option>Staging</option>
+          <option selected>Production</option>
       </select>
     </div>
   </div>
+</div>
+<div class="aspect-popup" ng-show="vm.showPopup">
+  <div class="close" ng-click="vm.hideDetailsPopup($event)">
+    <span class="glyphicon glyphicon-remove"></span>
   </div>
+  <div class="lead">Details Popup</div>
+  <div>There can be more information here.</div>
 </div>
