@@ -69,25 +69,18 @@
     background-color: $dark-green;
   }
 
-  .job-details {
+  .aspect-container {
     display: inline-block;
     width: 17%;
     height: 160px;
     border: solid 3px;
+    vertical-align: top;
     margin: 10px;
     padding: 0 10px 5px;
-    vertical-align: top;
-  }
 
-  .job-details-outcome {
-    display: inline-block;
-    width: 15%;
-    height: 160px;
-    border: solid 3px transparent;
-    margin: 10px;
-    padding: 0 10px 5px;
-    vertical-align: top;
-    text-align: center;
+    &.outcome {
+      border-color: transparent;
+    }
   }
 
 }

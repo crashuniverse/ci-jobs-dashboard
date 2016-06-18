@@ -1,0 +1,88 @@
+.aspect-metrics {
+
+  .number {
+    display: inline-block;
+    width: 48%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+
+  .metrics-label {
+    font-size: 1.2rem;
+  }
+}
+
+.aspect-build {
+
+  .icon-build-target {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    opacity: 0.7;
+  }
+
+  .timestamp {
+    text-align: center;
+    margin-top: 5px;
+  }
+}
+
+.aspect-unit, .aspect-functional {
+
+  .pass {
+    color: $lime;
+  }
+
+  .fail {
+    color: $orange;
+  }
+
+  .pass-percent {
+    font-size: 2.5rem;
+  }
+
+  .pass-percent-label {
+    font-size: 1rem;
+  }
+
+  .code-coverage {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .code-coverage-percent {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .code-coverage-percent-label {
+    font-size: 1rem;
+  }
+}
+
+.aspect-outcome {
+  text-align: center;
+
+  h4 {
+    color: $black;
+  }
+
+  .result {
+    font-size: 2.2rem;
+  }
+
+  .result-firewall-accepted {
+    font-size: 2.2rem;
+    color: $yellow;
+  }
+
+  .btn-action {
+    border-radius: 0;
+  }
+
+  .select-env {
+    margin-top: 10px;
+  }
+}

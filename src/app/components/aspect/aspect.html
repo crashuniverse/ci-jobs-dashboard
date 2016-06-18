@@ -1,0 +1,139 @@
+<div class="aspect aspect-metrics" ng-if="vm.type === 'metrics'">
+  <h4>Metrics</h4>
+  <div class="number">
+    <div>
+      <span class="glyphicon"
+       ng-class="{'glyphicon-arrow-up': vm.details.testResult === 'up', 'glyphicon-arrow-down': vm.details.testResult === 'down', 'glyphicon-arrow-right': vm.details.testResult === 'nochange'}"></span>
+      <span>{{ vm.details.test }}</span>
+    </div>
+    <div class="metrics-label">Test</div>
+  </div>
+  <div class="number">
+    <div>
+      <span class="glyphicon"
+       ng-class="{'glyphicon-arrow-up': vm.details.maintainabilityResult === 'up', 'glyphicon-arrow-down': vm.details.maintainabilityResult === 'down', 'glyphicon-arrow-right': vm.details.maintainabilityResult === 'nochange'}"></span>
+      <span>{{ vm.details.maintainability }}</span>
+    </div>
+    <div class="metrics-label">Maintainability</div>
+  </div>
+  <div class="number">
+    <div>
+      <span class="glyphicon"
+       ng-class="{'glyphicon-arrow-up': vm.details.securityResult === 'up', 'glyphicon-arrow-down': vm.details.securityResult === 'down', 'glyphicon-arrow-right': vm.details.securityResult === 'nochange'}"></span>
+      <span>{{ vm.details.security }}</span>
+    </div>
+    <div class="metrics-label">Security</div>
+  </div>
+  <div class="number">
+    <div>
+      <span class="glyphicon"
+       ng-class="{'glyphicon-arrow-up': vm.details.workmanshipResult === 'up', 'glyphicon-arrow-down': vm.details.workmanshipResult === 'down', 'glyphicon-arrow-right': vm.details.workmanshipResult === 'nochange'}"></span>
+      <span>{{ vm.details.workmanship }}</span>
+    </div>
+    <div class="metrics-label">Workmanship</div>
+  </div>
+</div>
+<div class="aspect aspect-build" ng-if="vm.type === 'build'">
+  <h4>Build</h4>
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <img class="icon-build-target"
+        ng-src="assets/images/job-type-{{ vm.type }}.svg" alt="build target icon" />
+      <div>Debug</div>
+    </div>
+    <div class="col-md-6 text-center">
+      <img class="icon-build-target"
+        ng-src="assets/images/job-type-{{ vm.type }}.svg" alt="build target icon" />
+      <div>Release</div>
+    </div>
+  </div>
+  <div class="timestamp">{{ vm.details.timestamp | date:'h:mm a M/dd/yyyy' }}</div>
+</div>
+<div class="aspect aspect-unit" ng-if="vm.type === 'unitTest'">
+  <h4>Unit Test</h4>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="pass">
+        <span>{{ vm.details.pass }}</span>
+        <span>pass</span>
+      </div>
+      <div class="fail">
+        <span>{{ vm.details.fail }}</span>
+        <span>fail</span>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="pass-percent">{{ vm.details.success }}%</div>
+      <div class="pass-percent-label">tests passed</div>
+    </div>
+  </div>
+  <div class="row code-coverage">
+    <div class="col-md-12">
+      <div class="code-coverage-percent">{{ vm.details.coverage }}%</div>
+      <div class="code-coverage-percent-label">code covered</div>
+    </div>
+  </div>
+</div>
+<div class="aspect aspect-functional" ng-if="vm.type === 'functionalTest'">
+  <h4>Functional Test</h4>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="pass">
+        <span>{{ vm.details.pass }}</span>
+        <span>pass</span>
+      </div>
+      <div class="fail">
+        <span>{{ vm.details.fail }}</span>
+        <span>fail</span>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="pass-percent">{{ vm.details.success }}%</div>
+      <div class="pass-percent-label">tests passed</div>
+    </div>
+  </div>
+  <div class="row code-coverage">
+    <div class="col-md-12">
+      <div class="code-coverage-percent">{{ vm.details.coverage }}%</div>
+      <div class="code-coverage-percent-label">code covered</div>
+    </div>
+  </div>
+</div>
+<div class="aspect aspect-outcome" ng-if="vm.type === 'outcome'">
+  <h4>Result</h4>
+  <div ng-show="vm.details.jobType === 'firewall'">
+    <div ng-show="vm.details.jobResult === 'rejected'">
+      <div>Change Rejected</div>
+      <div class="result">Metrics Reduction</div>
+      <button class="btn btn-primary btn-block btn-action">Find issues</button>
+    </div>
+    <div ng-show="vm.details.jobResult === 'accepted'">
+      <div>Change Accepted</div>
+      <div class="result-firewall-accepted">Auto-Merged</div>
+      <br />
+      <button class="btn btn-primary btn-block btn-action">
+        <span class="glyphicon glyphicon-search"></span>
+        <span>Merged Build</span>
+      </button>
+    </div>
+  </div>
+  <div ng-show="vm.details.jobType === 'build'">
+    <div ng-show="vm.details.jobResult === 'fail'">
+      <div>Build Failed</div>
+      <div class="result">Metrics Reduction</div>
+      <button class="btn btn-primary btn-block btn-action">Find issues</button>
+    </div>
+    <div ng-show="vm.details.jobResult === 'success'">
+      <div class="result">Complete</div>
+      <br />
+      <button class="btn btn-primary btn-action">Deploy</button>
+      <span>to:</span>
+      <select class="select-env">
+        <option>Development</option>
+        <option>Staging</option>
+        <option selected>Production</option>
+      </select>
+    </div>
+  </div>
+  </div>
+</div>

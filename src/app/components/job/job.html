@@ -5,7 +5,7 @@
         ng-src="assets/images/job-type-{{ vm.type }}.svg" alt="job type icon" />
       <div class="grid-item name">{{ vm.name }}</div>
       <div class="grid-item owner">{{ vm.owner }}</div>
-      <div class="grid-item timestamp">{{ vm.timestamp | date:'M/dd/yyyy hh:mm a' }}</div>
+      <div class="grid-item timestamp">{{ vm.timestamp | date:'M/dd/yyyy h:mm a' }}</div>
       <div class="grid-item state">{{ vm.state }}</div>
       <div class="grid-item metrics">
         <div class="block"></div>
@@ -23,26 +23,11 @@
   </div>
   <div class="row" ng-if="vm.isOpen">
     <div class="col-md-12">
-      <div class="job-details">
-        <h4>Metrics</h4>
-        <code>{{ vm.metrics }}</code>
-      </div>
-      <div class="job-details">
-        <h4>Build</h4>
-        <code>{{ vm.build }}</code>
-      </div>
-      <div class="job-details">
-        <h4>Unit Test</h4>
-        <code>{{ vm.unitTest }}</code>
-      </div>
-      <div class="job-details">
-        <h4>Functional Test</h4>
-        <code>{{ vm.functionalTest }}</code>
-      </div>
-      <div class="job-details-outcome">
-        <h4>Result</h4>
-        <code>{{ vm.outcome }}</code>
-      </div>
+      <aspect class="aspect-container" type="metrics" details="vm.metrics"></aspect>
+      <aspect class="aspect-container" type="build" details="vm.build"></aspect>
+      <aspect class="aspect-container" type="unitTest" details="vm.unitTest"></aspect>
+      <aspect class="aspect-container" type="functionalTest" details="vm.functionalTest"></aspect>
+      <aspect class="aspect-container outcome" type="outcome" details="vm.outcome"></aspect>
     </div>
   </div>
 </div>

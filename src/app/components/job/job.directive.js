@@ -9,10 +9,10 @@ export function JobDirective() {
       name: '@',
       owner: '@',
       timestamp: '@',
-      metrics: '@',
-      build: '@',
-      unitTest: '@',
-      functionalTest: '@',
+      metrics: '=',
+      build: '=',
+      unitTest: '=',
+      functionalTest: '=',
       isOpen: '='
     },
     templateUrl: 'app/components/job/job.html',
@@ -44,7 +44,10 @@ export function JobDirective() {
     const jobNode = el.children()[0];
     angular.element(jobNode).addClass(classToAdd);
 
-    scope.vm.outcome = {};
+    scope.vm.outcome = {
+      jobType: scope.vm.type,
+      jobResult: scope.vm.state
+    };
   }
 
 }
